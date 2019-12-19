@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>sy11-3</title>
+		<style>
+			*{margin: 0;padding: 0;}
+			#wrap{
+				position: relative;
+				width: 720px;
+				height: 720px;
+				margin: auto;
+				border: 2px solid #000;
+				cursor: pointer;
+			}
+			#wrap img{
+				position: absolute;
+				display: none;
+			}
+			#wrap .on{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<img id="img1"class="on"src="images/1.jpeg"alt="">
+			<img id="img2"src="images/2.jpg"alt="">
+		</div>
+		<script>
+			let oImg1=document.getElementById("img1"),
+			oImg2=document.getElementById("img2");
+			//第一个图片的单击事件
+			oImg1.onclick=function () {
+				oImg1.className="";
+				oImg2.className="on";
+			}
+			//第二个图片的单击事件
+			oImg2.onclick=function () {
+				oImg2.className="";
+				oImg1.className="on";
+			}
+		</script>
+	</body>
+</html>
